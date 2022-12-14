@@ -35,6 +35,10 @@ sudo docker run hello-world
 
 ## Usage in FastAPI
 1. Create an Image file
+```bash
+vi Dockerfile
+```
+then create the image details like the details below:
 ```Dockerfile
 FROM python:3.8.1
 # setup a working directory
@@ -56,12 +60,33 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 # if using nginx use the cmd below
 # CMD ["uvicorn", "app:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "8000"]
 ```
-2. Build the image
-```bash
-sudo docker build -t <docker-image-name> .
-```
-3. Run the docker
-```bash
-# this will allow to connect to the local database in the host
-sudo docker run -d --name <container-name> --network="host" <image-name>
-```
+
+* Running using docker
+    1. Build the image
+    ```bash
+    sudo docker build -t <docker-image-name> .
+    ```
+    2. Run the docker
+    ```bash
+    # this will allow to connect to the local database in the host
+    sudo docker run -d --name <container-name> --network="host" <image-name>
+    ```
+
+* Running using docker compose
+    1. Create a docker compose file
+    ```bash
+    vi docker-compose.yml
+    ```
+    then put the details needed for the docker compose to run like the below details:
+    ```yaml
+    services:
+        sample-oauth2-service:
+            build:
+            context: .
+            dockerfile: Dockerfile
+            network_mode: "host"
+    ```
+    2. Run the docker compose
+    ```bash
+    sudo docker compose up -d --build
+    ```
