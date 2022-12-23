@@ -5,3 +5,5 @@ This repository consists of different cheatsheets for some of the technology I h
 * [Docker Cheatsheet](docker-cheatsheet.md)
 * [NGINX Cheatsheet](nginx-cheatsheet.md)
 * [JBOSS Cheatsheet](jboss-cheatsheet.md)
+* [REDIS Cheatsheet](redis-cheatsheet.md)
+* [Memcached Cheatsheet](memcached-cheatsheet.md)
