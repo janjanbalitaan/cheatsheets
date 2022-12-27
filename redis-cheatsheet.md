@@ -31,4 +31,42 @@ systemctl status redis
 # sudo systemctl restart redis # to restart the redis service
 ```
 
+## Adding an authorization
+1. Open the configuration file
+```bash
+sudo vi /etc/redis/redis.conf
+```
+2. Add a password
+```conf
+# you may just uncomment if requirepass is already existing then just change the password 
+requirepass <your password here>
+```
+3. Restart the Redis Server
+```bash
+sudo systemctl restart redis
+```
 
+## Usage in CLI
+1. open the redis cli
+```bash
+redis-cli
+```
+2. [Optional] Authenticate if need
+```bash
+auth <password here>
+```
+3. Set a value for the key
+```bash
+set foo 1
+```
+4. Get the value of the key
+```bash
+get foo
+```
+5. Exit the redis cli
+```bash
+exit
+```
+
+## Usage in FastAPI
+* Access the [github repo](https://github.com/janjanbalitaan/fastapi-with-redis-sample) for the sample
