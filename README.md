@@ -8,3 +8,4 @@ This repository consists of different cheatsheets for some of the technology I h
 * [REDIS Cheatsheet](redis-cheatsheet.md)
 * [Memcached Cheatsheet](memcached-cheatsheet.md)
 * [PosgreSQL-Barman Cheatsheet](postgresql-barman-cheatsheet.md)
+* [PosgreSQL-Replication Cheatsheet](postgresql-replication-cheatsheet.md)
