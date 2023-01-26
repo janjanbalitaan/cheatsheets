@@ -9,3 +9,4 @@ This repository consists of different cheatsheets for some of the technology I h
 * [Memcached Cheatsheet](memcached-cheatsheet.md)
 * [PosgreSQL-Barman Cheatsheet](postgresql-barman-cheatsheet.md)
 * [PosgreSQL-Replication Cheatsheet](postgresql-replication-cheatsheet.md)
+* [PosgreSQL Backup and Restore Cheatsheet](postgresql-backup-and-restore-cheatsheet.md)
